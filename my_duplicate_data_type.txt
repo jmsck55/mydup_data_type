@@ -1,0 +1,31 @@
+
+// Duplicate data type (or "dup" for short)
+
+// About:
+// Performs like a Dynamic Link Library (dll) only allocating the same data once.
+
+
+// Version 1
+
+typedef struct mydatatype1 {
+	int customizable_datatype;
+	int some_values;
+	int more_values;
+} mydatatype;
+
+typedef struct dup1 {
+	int count;
+	mydatatype * data;
+} dup;
+
+
+// Version 2
+
+typedef struct mydatatype2 {
+	int count;
+	int customizable_datatype;
+	int some_values;
+	int more_values;
+} mydup_with_data_type;
+
+
